@@ -53,8 +53,34 @@
 	</div>
 	</div>
     </div>
-	<script src="/dist/js/script.js"></script>
-	<script src="/dist/js/aritmatika.js"></script>
+	<!-- <script src="/dist/js/script.js"></script> -->
+	<!-- <script src="/dist/js/aritmatika.js"></script> -->
+
+	<script>
+		const bodyClass = "bg-blue-500 bg-gradient-to-br from-blue-200 bg-opacity-25";
+		const bdy       = document.querySelector("body");
+		bodyClass.split(" ").forEach((cls) => bdy.classList.add(cls));
+
+		const calcBodyClass ="max-w-lg rounded overflow-hidden shadow-2xl bg-white bg-opacity-75";
+		const calcBody      = document.querySelector(".calcBody");
+		calcBodyClass.split(" ").forEach((cls) => calcBody.classList.add(cls));
+
+		// Insert angka
+		function insert(num){
+			document.form.textarea.value = document.form.textarea.value + num;
+		}
+
+		// Fungsi Hitung
+		function equal(){
+			var hasil = document.form.textarea.value;
+			document.form.textarea.value = eval(hasil);
+		}
+
+		// Fungsi Clean atau Bersihkan Text
+		function clean(){
+			document.form.textarea.value = "";
+		}
+	</script>
 </body>
 
 </html>
